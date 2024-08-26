@@ -43,9 +43,9 @@ typedef struct Context_Extra {
 // #include "oogabooga/examples/custom_shader.c"
 // #include "oogabooga/examples/growing_array_example.c"
 // #include "oogabooga/examples/input_example.c"
-#include "oogabooga/examples/sprite_animation.c"
+// #include "oogabooga/examples/sprite_animation.c"
 
 // #include "oogabooga/examples/sanity_tests.c"
 
 // This is where you swap in your own project!
-// #include "entry_yourepicgamename.c"
+#include "course_program.c"
