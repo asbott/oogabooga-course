@@ -1,44 +1,47 @@
 
 
-//		Caveman programming 2: Simple Memory Xform
-	
-	// One line comment
-	
-	/*
-		Multi-line block comment
-	*/
+//		Caveman programming 3: Conditional exection
+
 
 /*
-	- The stack
-	- Scopes
-	- Variables
-	- Base types
-	- Transforming scope variables (stack memory)
-		- Setting memory
-		- Basic arithmetic operations
-		- Bit operations
-	- Breakpoint, step & view memory in debugger
-	- (Disassembler)
-	- Printing variables
+	- Standard input (stdin)
+	- Logical operations
+	- If statement
+	- User selection
+	- "while"-loop
+	- Selection loops
+	- "for"-loop
+	- Limited selection loop
+	- Opening a window, game loop, exit
 */
 
 int entry(int argc, char **argv) {
 
 	/*
-		The four base types:
+	
+		&& - Logical AND
+		|| - Logical OR
 		
-		Integers (u8, u16, u32, u64, s8, s16, s32, s64)
-		Real numbers (float32, float64)
-		Strings/text (string)
-		Booleans (bool)
-	
+		< > - less than, greater than
+		<= >= - less than equals, greater than equals
+		
+		== - Equivalence?
+		!= - Not equivalence?
+		
 	*/
+
+	window.title = STR("My Epic Game");
 	
-	bool my_boolean = false;
-	string my_text = STR("Ooga, Booga!");
+	bool is_game_running = true;
 	
-	print("My boolean is: %b, my_text is: %s\n", my_boolean, my_text);
-	
+	while (is_game_running && !window.should_close) {
+		
+		if (is_key_down(KEY_ESCAPE)) {
+			is_game_running = false;
+		}
+		
+		os_update();
+	}
 
 	return 0;
 }
